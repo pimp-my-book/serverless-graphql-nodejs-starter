@@ -10,5 +10,11 @@ This is hugely inspired by the starter that Anomaly Innovations created. The pro
 
 ## How to get started
 
+### How Link Other AWS Services
+
+#### DynamoDB
+#### Cognito
+
+
 ## Contributing
 
