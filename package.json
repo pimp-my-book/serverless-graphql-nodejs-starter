@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
+    "url": "https://github.com/pimp-my-book/serverless-graphql-nodejs-starter"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

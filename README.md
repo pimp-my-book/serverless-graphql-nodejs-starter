@@ -17,6 +17,39 @@ Note this project uses [Yarn](https://yarnpkg.com).
 
 ## How to get started
 
+First clone the repo:
+
+```
+
+```
+
+Move into the project folder:
+
+```
+
+```
+
+Then Install all its dependancies:
+
+```
+
+```
+
+Then you should be able to invoke the Lambda locally:
+
+```
+
+```
+
+To deploy to AWS run the following command:
+
+```
+
+```
+
+This should be a good start to be able to move on and do whatever you gotta do meet business requirements.  
+
+
 ### How Link Other AWS Services
 
 #### DynamoDB
