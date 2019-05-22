@@ -26,9 +26,19 @@ provider:
   #environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
-  hello:
-    handler: handler.hello
+  graphql:
+    handler: src/graphql.graphqlHandler
+    environment:
+      SLS_DEBUG: true
     events:
       - http:
-          path: hello
-          method: get
+          path: graphql
+          method: post 
+          cors: true 
+          integration: lambda-proxy
+
+      - http:
+          path: graphql
+          method: get 
+          cors: true
+          integration: lambda-proxy
