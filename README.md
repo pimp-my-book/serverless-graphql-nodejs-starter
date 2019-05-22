@@ -50,7 +50,7 @@ $ yarn deploy
 This should be a good start to be able to move on and do whatever you gotta do meet business requirements.  
 
 
-### How Link Other AWS Services
+### How To Link Other AWS Services
 
 #### DynamoDB
 #### Cognito
