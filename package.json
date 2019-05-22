@@ -4,6 +4,8 @@
   "description": "A GraphQL Node.js starter for the Serverless Framework with async/await and unit test support",
   "main": "handler.js",
   "scripts": {
+    "offline": "sls offline",
+    "deploy": "sls deploy",
     "test": "jest"
   },
   "author": "",
