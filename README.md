@@ -8,7 +8,7 @@ This is hugely inspired by the starter that (Anomaly Innovations)[https://github
 
 ## Prerequistes 
 
-* An AWS Account
+* (An AWS Account)[https://aws.amazon.com/]
 * [A configured AWS CLI](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
 * [Serverless Framework installed on your machine](https://serverless.com/framework/docs/providers/aws/guide/installation/)
 * [NodeJS](nodejs.org) 
