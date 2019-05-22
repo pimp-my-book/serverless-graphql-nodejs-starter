@@ -8,6 +8,13 @@ This is hugely inspired by the starter that Anomaly Innovations created. The pro
 
 ## Prerequistes 
 
+* An AWS Account
+* A configured AWS CLI
+* Serverless Framework installed on your machine
+* NodeJS
+
+Note this project uses Yarn. 
+
 ## How to get started
 
 ### How Link Other AWS Services
