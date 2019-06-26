@@ -1,4 +1,8 @@
-# Serverless GraphQL NodeJS Starter
+<h1 align="center">
+    <img  alt="serverless start"  src="https://github.com/pimp-my-book/serverless-graphql-nodejs-starter/blob/master/serverless-starter.png">
+ </h1>
+
+# Serverless GraphQL NodeJS Starter ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 This is a basic boilerplate to kitstart your Serverless GraphQL projects with AWS Lambda. 
 
