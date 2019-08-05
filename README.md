@@ -8,7 +8,7 @@ This is a basic boilerplate to kitstart your Serverless GraphQL projects with AW
 
 It is powered by [`Apollo-Server-Lambda`](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-lambda) and uses the [Serverless Framework](https://serverless.com/) to deploy it to AWS.
 
-This is hugely inspired by the starter that [Anomaly Innovations](https://github.com/AnomalyInnovations/serverless-nodejs-starter )created. The project was cloned from it. 
+This is hugely inspired by the starter that [Anomaly Innovations](https://github.com/AnomalyInnovations/serverless-nodejs-starter ) created. The project was cloned from it. 
 
 ## Prerequistes 
 
