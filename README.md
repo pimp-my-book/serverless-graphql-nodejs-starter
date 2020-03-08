@@ -4,7 +4,7 @@
 
 # Serverless GraphQL NodeJS Starter ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-This is a basic boilerplate to kitstart your Serverless GraphQL projects with AWS Lambda. 
+This is a basic boilerplate to kitstart your Serverless GraphQL projects with AWS Lambda. There is also a [TypeScript version](https://github.com/AmoDinho/serverless-graphql-typescript-starter/blob/master/README.md) if you prefer!
 
 It is powered by [`Apollo-Server-Lambda`](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-lambda) and uses the [Serverless Framework](https://serverless.com/) to deploy it to AWS.
 
