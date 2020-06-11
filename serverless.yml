@@ -3,21 +3,20 @@ service: serverless-graphql-nodejs-starter
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
-  - serverless-webpack
+  - serverless-bundle
   - serverless-offline
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
 custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
   serverless-offline:
     port: 4000
+  bundle:
+    linting: false
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   stage: dev
   region: us-east-1
   # To load environment variables externally
@@ -35,12 +34,12 @@ functions:
     events:
       - http:
           path: graphql
-          method: post 
-          cors: true 
+          method: post
+          cors: true
           integration: lambda-proxy
 
       - http:
           path: graphql
-          method: get 
+          method: get
           cors: true
           integration: lambda-proxy
