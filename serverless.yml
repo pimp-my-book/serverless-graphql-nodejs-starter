@@ -18,8 +18,13 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
   region: us-east-1
+  stage: ${opt:stage, self:provider.stage}
+  TabkeDB: ${self:custom.stage}-tableDB
+  tableThroughputs:
+    prod: 1
+    default: 1
+  tableThroughput: ${self:custom.tableThroughputs.${self:custom.stage}, self:custom.tableThroughputs.default}
   # To load environment variables externally
   # rename env.example to env.yml and uncomment
   # the following line. Also, make sure to not
@@ -27,6 +32,21 @@ provider:
   #
   #environment:
   #name_of_var: ${env:NAME_OF_VAR}
+  #tableDB: ${self:custom.tableDB}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      # Restrict our IAM role permissions to
+      # the specific table for the stage
+      Resource:
+        - "Fn::GetAtt": [TableDB, Arn]
 
 functions:
   graphql:
@@ -45,3 +65,8 @@ functions:
           method: get
           cors: true
           integration: lambda-proxy
+
+resources:
+  - ${file(resources/sqs-queue.yml)}
+  - ${file(resources/table.yml)}
+  - ${file(resources/s3-bucket.yml)}
