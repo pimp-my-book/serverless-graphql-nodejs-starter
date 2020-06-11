@@ -6,7 +6,7 @@
   "scripts": {
     "offline": "sls offline",
     "deploy": "sls deploy",
-    "test": "jest"
+    "test": "serverless-bundle test"
   },
   "author": "",
   "license": "MIT",
