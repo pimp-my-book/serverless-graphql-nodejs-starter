@@ -20,7 +20,7 @@ provider:
   runtime: nodejs12.x
   region: us-east-1
   stage: ${opt:stage, self:provider.stage}
-  TabkeDB: ${self:custom.stage}-tableDB
+  TableDB: ${self:custom.stage}-tableDB
   tableThroughputs:
     prod: 1
     default: 1
@@ -30,9 +30,11 @@ provider:
   # the following line. Also, make sure to not
   # commit your env.yml.
   #
-  #environment:
-  #name_of_var: ${env:NAME_OF_VAR}
-  #tableDB: ${self:custom.tableDB}
+  environment:
+    name_of_var: ${env:NAME_OF_VAR}
+    tableDB: ${self:custom.tableDB}
+    account: ${env:ACCOUNT}
+
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -47,6 +49,13 @@ provider:
       # the specific table for the stage
       Resource:
         - "Fn::GetAtt": [TableDB, Arn]
+    # - Effect: "Allow"
+    #   Action:
+    #     - "sqs:GetQueueUrl"
+    #     - "sqs:ListQueues"
+    #     - "sqs:SendMessage"
+    #   Resource:
+    #     - "arn:aws:sqs:${self:provider.environment.region}:${self:provider.environment.account}:*"
 
 functions:
   graphql:
@@ -70,3 +79,7 @@ resources:
   - ${file(resources/sqs-queue.yml)}
   - ${file(resources/table.yml)}
   - ${file(resources/s3-bucket.yml)}
+  # events:
+  #     - sqs:
+  #         arn: "arn:aws:sqs:${self:provider.environment.region}:${self:provider.environment.account}:${self:provider.environment.quque_name}-${self:provider.stage}"
+  #         batchSize: 1
