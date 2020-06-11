@@ -20,7 +20,7 @@
     "serverless-offline": "^5.3.3"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.14.3",
+    "apollo-server-lambda": "^2.14.2",
     "graphql": "^14.3.0",
     "aws-sdk": "2.694.0"
   }
