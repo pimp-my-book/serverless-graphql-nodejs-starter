@@ -5,6 +5,7 @@ service: serverless-graphql-nodejs-starter
 plugins:
   - serverless-bundle
   - serverless-offline
+  - serverless-dotenv-plugin
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
@@ -24,7 +25,8 @@ provider:
   # the following line. Also, make sure to not
   # commit your env.yml.
   #
-  #environment: ${file(env.yml):${self:provider.stage}}
+  #environment:
+  #name_of_var: ${env:NAME_OF_VAR}
 
 functions:
   graphql:
