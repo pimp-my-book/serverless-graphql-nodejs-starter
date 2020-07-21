@@ -4,7 +4,7 @@ describe("hello query", () => {
     const args = "args";
     const context = "context";
 
-    const response = await getAllListings(args, context);
-    expect(response).toEqual("Your GraphQL API is now LIVE!🎈");
+    const response = await hello(args, context);
+    expect(response).toContain("Your GraphQL API is now LIVE!🎈");
   });
 });
